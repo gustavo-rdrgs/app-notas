@@ -1,16 +1,27 @@
 /* Import Google Font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+:root {
+  --primary-bg: #151b23;
+  --secondary-bg: #212830;
+  --accent-color: #f78166;
+  --text-color: white;
+  --muted-text: #abacad;
+  --border-color: #9198a1;
+  --input-bg: #242a31;
+  --button-bg: #292f36;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "JetBrains Mono", monospace;
-  color: white;
+  color: var(--text-color);
 }
 
 body {
-  background: #151b23;
+  background: var(--primary-bg);
 }
 
 .wrapper {
@@ -25,7 +36,7 @@ body {
   list-style: none;
   border-radius: 5px;
   padding: 15px 20px 20px;
-  background: #212830;
+  background: var(--secondary-bg);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -49,15 +60,14 @@ header,
 .add-box .icon {
   height: 78px;
   width: 78px;
-  color: #f78166;
   font-size: 40px;
   border-radius: 50%;
   justify-content: center;
-  border: 2px dashed #f78166;
+  border: 2px dashed var(--accent-color);
 }
 
 .add-box p {
-  color: #f78166;
+  color: var(--accent-color);
   font-weight: 500;
   margin-top: 20px;
 }
@@ -80,18 +90,18 @@ header,
 
 .note .details:hover::-webkit-scrollbar,
 .popup textarea:hover::-webkit-scrollbar {
-  width: 5px;
+  width: 7px;
 }
 
 .note .details:hover::-webkit-scrollbar-track,
 .popup textarea:hover::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--primary-bg);
   border-radius: 25px;
 }
 
 .note .details:hover::-webkit-scrollbar-thumb,
 .popup textarea:hover::-webkit-scrollbar-thumb {
-  background: #e6e6e6;
+  background: var(--accent-color);
   border-radius: 25px;
 }
 
@@ -102,18 +112,18 @@ header,
 
 .note span {
   display: block;
-  color: #9198a1;
+  color: var(--muted-text);
   font-size: 16px;
   margin-top: 5px;
 }
 
 .note .bottom-content {
   padding-top: 10px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--border-color);
 }
 
 .bottom-content span {
-  color: #9198a1;
+  color: var(--muted-text);
   font-size: 14px;
 }
 
@@ -122,7 +132,7 @@ header,
 }
 
 .bottom-content .settings i {
-  color: #f78166;
+  color: var(--accent-color);
   cursor: pointer;
   font-size: 15px;
 }
@@ -132,7 +142,7 @@ header,
   bottom: 0;
   right: -5px;
   padding: 5px 0;
-  background: #212830;
+  background: var(--secondary-bg);
   position: absolute;
   border-radius: 4px;
   transform: scale(0);
@@ -161,7 +171,7 @@ header,
 }
 
 .menu li:hover {
-  background: #151b23;
+  background: var(--primary-bg);
 }
 
 .menu li i {
@@ -208,14 +218,14 @@ header,
 
 .popup .content {
   border-radius: 5px;
-  background: #212830;
+  background: var(--secondary-bg);
   width: calc(100% - 15px);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .content header {
   padding: 15px 25px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .content header p {
@@ -224,7 +234,7 @@ header,
 }
 
 .content header i {
-  color: #8b8989;
+  color: var(--accent-color);
   cursor: pointer;
   font-size: 23px;
 }
@@ -251,12 +261,12 @@ form :where(input, textarea) {
   font-size: 17px;
   padding: 0 15px;
   border-radius: 4px;
-  border: 1px solid #9198a1;
-  background-color: #242a31;
+  border: 1px solid var(--border-color);
+  background-color: var(--input-bg);
 }
 
 form :where(input, textarea):focus {
-  border-color: #f78166;
+  border-color: var(--accent-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.11);
 }
 
@@ -269,21 +279,17 @@ form .row textarea {
 form button {
   width: 100%;
   height: 50px;
-  color: #fff; 
   outline: none;
   border: none;
   cursor: pointer;
   font-size: 17px;
   border-radius: 4px;
-  background: transparent;
+  background: var(--button-bg);
 }
 
-form button:hover {
-  background-color: #f78166;
-}
-
+form button:hover,
 form button:focus {
-  background-color: #f78166;
+  background-color: var(--accent-color);
 }
 
 
